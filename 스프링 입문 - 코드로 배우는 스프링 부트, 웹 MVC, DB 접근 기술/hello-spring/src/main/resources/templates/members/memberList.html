@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div class="container">
+  <div>
+    <table>
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>이름</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="member: ${members}"> // $는 데이터를 끄집어 내는 거임, th:each는 루프를 돌리는것! 첫번째 객체를 꺼내서 member에 담는다.
+          <td th:text="${member.id}"></td>
+          <td th:text="${member.name}"></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>
